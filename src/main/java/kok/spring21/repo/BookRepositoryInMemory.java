@@ -4,7 +4,9 @@ import kok.spring21.models.Book;
 
 import java.util.Set;
 import java.util.HashSet;
+import lombok.ToString;
 
+@ToString
 public class BookRepositoryInMemory implements BookRepository{
     Set<Book> s=new HashSet<Book>(); 
 

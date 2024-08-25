@@ -11,4 +11,8 @@ public class BookService{
     public void save(Book book){
         bookRepository.save(book);
     }
+
+    public String toString(){
+        return bookRepository.toString();
+    }
 }

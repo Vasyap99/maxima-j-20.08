@@ -24,6 +24,14 @@ public class TestSpring {
 
         BookService bookService=context.getBean("bookService",BookService.class);
 
+        bookService.save(Book.builder()
+                             .name("Evgenij Onegin")
+                             .author("Pushkin")
+                             .build() 
+        );
+
+
+        System.out.println(bookService.toString());
         context.close();
     }
 }
