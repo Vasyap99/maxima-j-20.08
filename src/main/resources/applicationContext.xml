@@ -6,20 +6,21 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean" class="kok.spring21.TestBean">
+    <!--bean id="testBean" class="kok.spring21.TestBean">
         <constructor-arg value="Koko"></constructor-arg>
     </bean>
 
     <bean id="beanPlayer" class="kok.spring21.BeanPlayer"  scope="prototype">
         <constructor-arg ref="testBean"></constructor-arg>
+    </bean-->
+
+    <bean id="book" class="kok.spring21.models.Book"  scope="prototype"/>
+
+    <bean id="bookRepositoryInMemory" class="kok.spring21.repo.BookRepositoryInMemory"  scope="singleton"/>
+
+    <bean id="bookService" class="kok.spring21.service.BookService">
+        <constructor-arg name="bookRepository" ref="bookRepositoryInMemory"/>
     </bean>
 
-    <bean id="Book" class="kok.spring21.models.Book"  scope="prototype">
-        <constructor-arg ref="author"></constructor-arg>
-        <constructor-arg ref="name"></constructor-arg>
-    </bean>
-
-    <bean id="BookRepositoryInMemory" class="kok.spring21.repo.BookRepositoryInMemory"  scope="singleton">
-    </bean>
 
 </beans>

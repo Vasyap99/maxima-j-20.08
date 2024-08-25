@@ -2,12 +2,16 @@ package kok.spring21;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import kok.spring21.repo.*;
+import kok.spring21.models.*;
+import kok.spring21.service.*;
+
+
 public class TestSpring {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-        //TestBean tb=context.getBean("testBean",TestBean.class);
 
-        BeanPlayer p=context.getBean("beanPlayer",BeanPlayer.class);
+        /*BeanPlayer p=context.getBean("beanPlayer",BeanPlayer.class);
         p.playBean();
 
         BeanPlayer p1=context.getBean("beanPlayer",BeanPlayer.class);
@@ -16,6 +20,10 @@ public class TestSpring {
         System.out.println(p.getB());//при Singleton TestBean  одиналовые значения
         System.out.println(p1.getB());
         //System.out.println(tb.getName());
+        */
+
+        BookService bookService=context.getBean("bookService",BookService.class);
+
         context.close();
     }
 }
