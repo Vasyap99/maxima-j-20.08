@@ -12,6 +12,11 @@
 
     <bean id="beanPlayer" class="kok.spring21.BeanPlayer"  scope="prototype">
         <constructor-arg ref="testBean"></constructor-arg>
-
     </bean>
+
+    <bean id="Book" class="kok.spring21.TestBean"  scope="prototype">
+        
+    </bean>
+
+
 </beans>
