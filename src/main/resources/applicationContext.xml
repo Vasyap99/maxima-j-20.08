@@ -19,5 +19,7 @@
         <constructor-arg ref="name"></constructor-arg>
     </bean>
 
+    <bean id="BookRepositoryInMemory" class="kok.spring21.repo.BookRepositoryInMemory"  scope="singleton">
+    </bean>
 
 </beans>
