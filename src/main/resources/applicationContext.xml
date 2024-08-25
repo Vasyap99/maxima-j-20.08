@@ -14,8 +14,9 @@
         <constructor-arg ref="testBean"></constructor-arg>
     </bean>
 
-    <bean id="Book" class="kok.spring21.TestBean"  scope="prototype">
-        
+    <bean id="Book" class="kok.spring21.models.Book"  scope="prototype">
+        <constructor-arg ref="author"></constructor-arg>
+        <constructor-arg ref="name"></constructor-arg>
     </bean>
 
 

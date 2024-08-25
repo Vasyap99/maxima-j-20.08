@@ -1,4 +1,4 @@
-package kok.spring21.model;
+package kok.spring21.models;
 
 import lombok.Getter;
 import lombok.Setter;
