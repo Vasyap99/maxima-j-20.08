@@ -6,17 +6,18 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
 ">
 
-    <!--context:property-placeholder location="application.properties"/-->
+    <context:property-placeholder location="resources/application.properties"/>
 
     <bean id="book" class="kok.spring21.models.Book"  scope="prototype"/>
 
-    <bean id="bookRepositoryInMemory" class="kok.spring21.repo.BookRepositoryInMemory"  scope="singleton"/>
+    <bean id="bookRepositoryInMemory" class="${repoClass}"  scope="singleton"/>
 
     <bean id="bookService" class="kok.spring21.service.BookService">
         <constructor-arg name="bookRepository" ref="bookRepositoryInMemory"/>
     </bean>
 
 
-</beans>  
+</beans>

@@ -1,0 +1,5 @@
+Exception in thread "main" org.springframework.beans.factory.xml.XmlBeanDefiniti
+onStoreException: Line 12 in XML document from class path resource [applicationC
+ontext.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineN
+umber: 12; columnNumber: 80; cvc-complex-type.2.4.c: The matching wildcard is st
+rict, but no declaration can be found for element 'context:property-placeholder'

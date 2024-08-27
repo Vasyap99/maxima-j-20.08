@@ -29,7 +29,11 @@ public class TestSpring {
                              .author("Pushkin")
                              .build() 
         );
-
+        bookService.save(Book.builder()
+                             .name("Mzyri")
+                             .author("Lermontov")
+                             .build() 
+        );
 
         System.out.println(bookService.toString());
         context.close();
