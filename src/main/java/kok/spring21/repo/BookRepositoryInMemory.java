@@ -18,6 +18,15 @@ public class BookRepositoryInMemory implements BookRepository{
         list.add(book);
     }
 
+    public Book findById(int id){
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId() == id) {
+                return list.get(i);
+            }
+        }
+        return null;
+    }
+
     @Override
     public List<Book> getAllBooks() {
         return list;
