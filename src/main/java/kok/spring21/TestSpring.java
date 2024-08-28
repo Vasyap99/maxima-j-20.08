@@ -42,6 +42,7 @@ public class TestSpring {
         Book b=null;
         String n=null,a=null;
         while(true){
+            System.out.println("-".repeat(50));
             System.out.println(bookService.toString());
             System.out.println("<Enter command: C R U D, E for exit>");
                 String i=s.nextLine();
@@ -61,7 +62,7 @@ public class TestSpring {
                         System.out.println("-Enter id:");
                         id=Integer.parseInt(s.nextLine());
                         b=bookService.getBookById(id);
-                        System.out.println(b.toString());
+                        System.out.println(b!=null ? b.toString() : "null");
                         break;
                     case "U":
                         System.out.println("-Enter id:");
